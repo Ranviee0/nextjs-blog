@@ -2,7 +2,7 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Space_Grotesk } from 'next/font/google'
+import { Noto_Sans_Thai_Looped } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -12,10 +12,11 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 
-const space_grotesk = Space_Grotesk({
-  subsets: ['latin'],
+const noto_sans_thai_looped = Noto_Sans_Thai_Looped({
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin', 'thai'],
   display: 'swap',
-  variable: '--font-space-grotesk',
+  variable: '--font-noto-sans-thai-looped',
 })
 
 export const metadata: Metadata = {
@@ -64,7 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${space_grotesk.variable} scroll-smooth`}
+      className={`${noto_sans_thai_looped.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <link

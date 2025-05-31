@@ -1,6 +1,5 @@
 import { ReactNode } from 'react'
-import Image from '@/components/Image'
-import Bleed from 'pliny/ui/Bleed'
+import { formatDate } from 'pliny/utils/formatDate'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
@@ -16,7 +15,7 @@ interface LayoutProps {
 }
 
 export default function PostMinimal({ content, next, prev, children }: LayoutProps) {
-  const { slug, title, images } = content
+  const { slug, title, images, date } = content
   const displayImage =
     images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400'
 
@@ -24,15 +23,16 @@ export default function PostMinimal({ content, next, prev, children }: LayoutPro
     <SectionContainer>
       <article>
         <div>
-          <div className="space-y-1 pb-10 text-center dark:border-gray-700">
-            <div className="w-full">
-              <Bleed>
-                <div className="relative aspect-2/1 w-full">
-                  <Image src={displayImage} alt={title} fill className="object-cover" />
-                </div>
-              </Bleed>
-            </div>
-            <div className="relative pt-10">
+          <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
+            <dl>
+              <div>
+                <dt className="sr-only">Published on</dt>
+                <dd className="text-base leading-6 font-medium text-gray-500 dark:text-gray-400">
+                  <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                </dd>
+              </div>
+            </dl>
+            <div>
               <PageTitle>{title}</PageTitle>
             </div>
           </div>

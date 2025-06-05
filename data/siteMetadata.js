@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: "Tananpong's Personal Site",
-  author: 'Tananpong Chamnannarongsak',
+  author: 'Tananpong C.',
   description: 'A blog created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light

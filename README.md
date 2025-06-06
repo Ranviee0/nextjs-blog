@@ -102,7 +102,7 @@ Thanks to the community of users and contributors to the template! We are no lon
 - [thvu.dev](https://thvu.dev) - Added `mdx-embed`, view count, reading minutes and more.
 - [irvin.dev](https://www.irvin.dev/) - Irvin Lin's personal site. Added YouTube embedding.
 - [KirillSo.com](https://www.kirillso.com/) - Personal blog & website.
-- [slightlysharpe.com](https://slightlysharpe.com) - [Tincre's](https://tincre.com) main company blog
+- [slightlysharpe.com](https://slightlysharpe.com) - [Tincre's](https://tincre.com) main location blog
 - [blog.b00st.com](https://blog.b00st.com) - [b00st.com's](https://b00st.com) main music promotion blog
 - [astrosaurus.me](https://astrosaurus.me/) - Ephraim Atta-Duncan's Personal Blog
 - [dhanrajsp.me](https://dhanrajsp.me/) - Dhanraj's personal site and blog.
